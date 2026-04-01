@@ -8,6 +8,8 @@
 
 It uses **AES-256-GCM-SIV**, a modern authenticated encryption mode that remains secure even if nonces are accidentally reused.
 
+TINY codebase, absurdly easy to audit or maintain. 
+
 ---
 
 ## ⚠️ Design Philosophy
