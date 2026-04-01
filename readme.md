@@ -1,10 +1,10 @@
-# 🔐 SIVCRYPT — Secure File Encryption Tool (AES-256-GCM-SIV)
+# 🔐 AES — Secure File Encryption Tool (AES-256-GCM-SIV)
 
 ---
 
 ## Overview
 
-**SIVCRYPT** is a secure, minimal, and robust file encryption tool written in Rust. It is designed with strong cryptographic guarantees, safe file handling, and resistance to common implementation mistakes.
+**AES** is a secure, minimal, and robust file encryption tool written in Rust. It is designed with strong cryptographic guarantees, safe file handling, and resistance to common implementation mistakes.
 
 It uses **AES-256-GCM-SIV**, a modern authenticated encryption mode that remains secure even if nonces are accidentally reused.
 
