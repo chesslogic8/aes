@@ -59,15 +59,15 @@ This tool is intentionally opinionated:
 
 ### Build
 
-```bash
+
 cargo build --release
-```
+
 
 Binary will be located at:
 
-```bash
+
 target/release/aes
-```
+
 
 ---
 
@@ -75,9 +75,9 @@ target/release/aes
 
 You **must** create a file named:
 
-```
+
 key.key
-```
+
 
 ### Requirements:
 
@@ -87,10 +87,10 @@ key.key
 
 ### Generate a secure key:
 
-```bash
+
 head -c 32 /dev/urandom > key.key
 chmod 600 key.key
-```
+
 
 ---
 
@@ -98,21 +98,21 @@ chmod 600 key.key
 
 ### Encrypt a file
 
-```bash
+
 ./aes E input.txt output.enc
-```
+
 
 ### Decrypt a file
 
-```bash
+
 ./aes D output.enc decrypted.txt
-```
+
 
 ### Verify a file (no output written)
 
-```bash
+
 ./aes V output.enc
-```
+
 
 ---
 
@@ -120,15 +120,15 @@ chmod 600 key.key
 
 Header (fixed size):
 
-```
+
 [ MAGIC (9 bytes) | VERSION (1) | FLAGS (1) | BASE_NONCE (8) | FILE_SIZE (8) | CHUNK_COUNT (4) ]
-```
+
 
 Then repeated:
 
-```
+
 [ ciphertext_chunk | authentication_tag (16 bytes) ]
-```
+
 
 ### Details
 
@@ -195,7 +195,7 @@ Each chunk is encrypted independently:
 
 ## Example Workflow
 
-```bash
+
 # Generate key
 head -c 32 /dev/urandom > key.key
 chmod 600 key.key
@@ -209,7 +209,7 @@ echo "secret" > file.txt
 
 # Decrypt
 ./aes D file.enc output.txt
-```
+
 
 ---
 
